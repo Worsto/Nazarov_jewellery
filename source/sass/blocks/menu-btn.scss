@@ -1,0 +1,34 @@
+.menu-btn {
+  display: none;
+  width: 25px;
+  height: 18px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.menu-btn--js:hover {
+  cursor: pointer;
+}
+
+.menu-btn--js svg {
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 25px;
+    height: 18px;
+
+    stroke: var(--basic-icon);
+  }
+}
+
+.menu-btn--menu svg {
+  @media (max-width: $tablet-width) {
+    stroke: var(--contrast-icon);
+  }
+}

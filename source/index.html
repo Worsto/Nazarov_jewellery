@@ -1,13 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>CHJewellery</title>
+  <meta name="description" content="CHJewellery shop main page">
+
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+
+<body class="page__body">
+  <header class="page-header page-header--menu">
+    <div class="page__container">
+      <div class="page-header__wrapper">
+        <button class="page-header__btn menu-btn" type="button">
+        </button>
+
+        <form class="page-header__search search-form search-form--menu" action="#" method="post">
+          <label for="search-field">
+            <svg class="search-form__icon" width="14" height="14" role="img">
+              <use href="img/sprite_auto.svg#icon-search"></use>
+            </svg>
+          </label>
+          <input type="search" name="search" id="search-field" placeholder="Type here to search">
+        </form>
+
+        <a class="page-header__logo page-header__logo--menu">
+          <svg width="66" height="66" role="img">
+            <use href="img/sprite_auto.svg#icon-logo"></use>
+          </svg>
+        </a>
+
+        <div class="page-header__link-wrapper user-area">
+          <a class="user-area__login-link login-link-js" href="login.html" target="_blank">Login</a>
+
+          <a class="user-area__cart user-area__cart--menu" href="#">
+            <div class="user-area__cart-text">
+              Cart&nbsp;
+              <span class="user-area__cart-counter">0</span>
+            </div>
+
+            <svg width="20" height="18" role="img">
+              <use href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="page-header__navbar navbar navbar--menu">
+        <ul class="navbar__list nav-list">
+          <li class="nav-list__item">
+            <a href="#new">What's new</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Chokers</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Necklaces</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Rings</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Earrings</a>
+          </li>
+        </ul>
+
+        <ul class="navbar__list nav-list__extra">
+          <li class="nav-list__extra-item">
+            <a href="#">About CH</a>
+          </li>
+          <li class="nav-list__extra-item">
+            <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+          </li>
+          <li class="nav-list__extra-item">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="nav-list__extra-item nav-list__extra-item--login login-link-js">
+            <a href="login.html" target="_blank">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">CHJewellery. Made to be yours</h1>
+      <section class="main-promo">
+        <div class="main-promo__img-wrapper">
+          <picture>
+            <!-- 1х: 1366px; 2x: 2732px -->
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/main-promo_desktop@1x.webp 1x, img/main-promo_desktop@2x.webp 2x">
+            <!-- 1х: 768px; 2x: 1536px -->
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-promo_tablet@1x.webp 1x, img/main-promo_tablet@2x.webp 2x">
+            <!-- 1х: 320px; 2x: 640px -->
+            <source type="image/webp" srcset="img/main-promo_mobile@1x.webp 1x, img/main-promo_mobile@2x.webp 2x">
+
+            <!-- 1х: 1366px; 2x: 2732px -->
+            <img src="img/main-promo_desktop@1x.jpg" srcset="img/main-promo_desktop@2x.jpg 2x" width="1366" height="463" alt="Promo image with lots of jewellery on person.">
+          </picture>
+        </div>
+
+        <div class="main-promo__text-wrapper">
+          <h2>
+            PERFECTION
+          </h2>
+          <p>
+            made to be yours
+          </p>
+        </div>
+      </section>
+
+      <section class="novelties">
+        <div class="page__container">
+          <div class="novelties__wrapper">
+          </div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="page__container">
+          <div class="blog__wrapper">
+
+            <div class="blog__heading page__heading">
+              <h2>Blog</h2>
+              <a href="#">Read All</a>
+            </div>
+
+            <div class="blog__content-wrapper">
+              <ul class="blog__list blog-list">
+                <li class="blog-list__item blog-item">
+                  <div class="blog-item__text-wrapper">
+                    <p>
+                      <time datetime="2019-09-30">September 30, 2019</time>
+                    </p>
+                    <h3>How to care for your jewellery</h3>
+                    <a href="">Read Article</a>
+                  </div>
+                  <div class="blog-item__img">
+
+                    <picture>
+                      <!-- 1х: 285px; 2x: 570px -->
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/blog-sept-30_desktop@1x.webp 1x, img/blog-sept-30_desktop@2x.webp 2x">
+                      <!-- 1х: 339px; 2x: 678x -->
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/blog-sept-30_tablet@1x.webp 1x, img/blog-sept-30_tablet@2x.webp 2x">
+                      <!-- 1х: 290px; 2x: 580px -->
+                      <source type="image/webp" srcset="img/blog-sept-30_mobile@1x.webp 1x, img/blog-sept-30_mobile@2x.webp 2x">
+
+                      <!-- 1х: 285px; 2x: 570px -->
+                      <img src="img/blog-sept-30_tablet@1x.jpg" srcset="img/dainty-gold-necklace_tablet@2x.jpg 2x" width="285" height="300" alt="The new Jewellery collection">
+                    </picture>
+                  </div>
+                </li>
+
+                <li class="blog-list__item blog-item">
+                  <div class="blog-item__text-wrapper">
+                    <p>
+                      <time datetime="2019-09-23">September 23, 2019</time>
+                    </p>
+                    <h3>Power of crystals</h3>
+                    <a href="">Read Article</a>
+                  </div>
+                  <div class="blog-item__img">
+                    <picture>
+                      <!-- 1х: 285px; 2x: 570px -->
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/blog-sept-23_desktop@1x.webp 1x, img/blog-sept-23_desktop@2x.webp 2x">
+                      <!-- 1х: 339px; 2x: 678x -->
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/blog-sept-23_tablet@1x.webp 1x, img/blog-sept-23_tablet@2x.webp 2x">
+                      <!-- 1х: 290px; 2x: 580px -->
+                      <source type="image/webp" srcset="img/blog-sept-23_mobile@1x.webp 1x, img/blog-sept-23_mobile@2x.webp 2x">
+
+                      <!-- 1х: 285px; 2x: 570px -->
+                      <img src="img/blog-sept-23_tablet@1x.jpg" srcset="img/dainty-gold-necklace_tablet@2x.jpg 2x" width="285" height="300" alt="The new Jewellery collection">
+                    </picture>
+                  </div>
+                </li>
+
+                <li class="blog-list__item blog-item blog-item--large">
+                  <div class="blog-item__text-wrapper">
+                    <p>
+                      <time datetime="2019-09-16">September 16, 2019</time>
+                    </p>
+                    <h3>AW 19 trends</h3>
+                    <a href="">Read Article</a>
+                  </div>
+
+                  <div class="blog-item__img">
+                    <picture>
+                      <!-- 1х: 570px; 2x: 1140px -->
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/blog-sept-16_desktop@1x.webp 1x, img/blog-sept-16_desktop@2x.webp 2x">
+                      <!-- 1х: 339px; 2x: 678x -->
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/blog-sept-16_tablet@1x.webp 1x, img/blog-sept-16_tablet@2x.webp 2x">
+                      <!-- 1х: 290px; 2x: 580px -->
+                      <source type="image/webp" srcset="img/blog-sept-16_mobile@1x.webp 1x, img/blog-sept-16_mobile@2x.webp 2x">
+
+                      <!-- 1х: 570px; 2x: 1140px -->
+                      <img src="img/blog-sept-16_desktop@1x.jpg" srcset="img/dainty-gold-necklace_desktop@2x.jpg 2x" width="570" height="630" alt="The new Jewellery collection">
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page__container page-footer__wrapper">
+      <section class="footer-signup">
+        <h2>
+          The good stuff in your inbox
+        </h2>
+        <p>
+          News and updates from CH. No spam, we promise.
+        </p>
+        <form class="footer-signup__form" action="#" method="POST">
+          <label for="usermail">
+            <input type="email" name="usermail" id="usermail" placeholder="Your E-mail" required>
+          </label>
+          <button class="footer-signup__btn" type="submit">
+            Sign Up
+            <svg class="footer-signup__icon" width="37" height="17" role="img">
+              <use href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <section class="footer-terms">
+        <h2 class="visually-hidden">Terms, Conditions and About Jewellery Shop</h2>
+        <ul class="footer-terms__list">
+          <li class="footer-terms__item">
+            <a href="#">Ordering&nbsp;&#38;&nbsp;Payment</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Terms&nbsp;&#38;&nbsp;Conditions</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Returns&nbsp;&#38;&nbsp;Exchanges</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Delivery</a>
+          </li>
+        </ul>
+
+        <ul class="footer-terms__list">
+          <li class="footer-terms__item">
+            <a href="#">About CH</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Jobs</a>
+          </li>
+          <li class="footer-terms__item">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </section>
+
+      <ul class="footer-social">
+        <li class="footer-social__item">
+          <a href="https://ru-ru.facebook.com">
+            <div class="footer-social__icon socials__icon--facebook">
+              <svg width="8" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+            </div>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a href="https://www.instagram.com/">
+            <div class="footer-social__icon socials__icon--instagram">
+              <svg width="15" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+            </div>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a href="https://www.pinterest.com/">
+            <div class="footer-social__icon socials__icon--pinterest">
+              <svg width="16" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+              </svg>
+            </div>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a href="https://twitter.com/">
+            <div class="footer-social__icon socials__icon--twitter">
+              <svg width="15" height="13" role="img">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+            </div>
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

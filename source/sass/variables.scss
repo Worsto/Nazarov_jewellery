@@ -1,0 +1,27 @@
+:root {
+  --main-theme: #a87b62;
+  --dark-theme: #563f33;
+  --dark-theme-opacity: #b3563f33;
+  --theme-hover: var(--dark-theme);//*
+  --basic-type: #1d1613;
+  --basic-icon: var(--basic-type);
+  --light-background: #f0eae4;
+  --clear-background: #ffffff;
+  --dark-background: #000000;
+  --opacity-background: rgba(255, 255, 255, 0.15);
+  --contrast-type: #ffffff;
+  --contrast-extra-type: #9b9997;
+  --contrast-icon: var(--contrast-type);
+  --light-border: #f6f5f4;
+  --contrast-border: var(--contrast-type);
+  --form-input-background: rgba(256, 256, 256, 0.1);//*
+  --silver: #c4c4c4;//*
+
+  --mobile-padding: 15px;
+  --tablet-padding: 45px;
+}
+
+$tablet-width: 1023px;
+$mobile-width: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
