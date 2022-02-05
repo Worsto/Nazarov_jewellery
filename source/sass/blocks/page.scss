@@ -1,0 +1,16 @@
+.page {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  color: var(--basic-type);
+  font-size: 16px;
+
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: center;
+  overflow-y: scroll;
+}

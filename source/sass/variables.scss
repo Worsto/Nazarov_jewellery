@@ -1,0 +1,42 @@
+:root {
+  --basic-type: #1d1613;
+  --contrast-type: #ffffff;
+  --extra-type: #9b9997;
+  --basic-icon: var(--basic-type);
+  --contrast-icon: var(--contrast-type);
+  --clear-background: #ffffff;
+  --blog-background: #f0eae4;
+  --main-theme: #a87b62;
+  --dark-background: #000000;
+  --main-border-line: var(--main-theme);
+  --header-line: #f6f5f4;
+  --contrast-line: #ffffff;
+  --link-line: var(--main-theme);
+  --promo-filter: #B3564034;
+}
+
+$font-poppins: "Poppins", "Tahoma", sans-serif;
+$font-pt-cormorant: "Cormorant Garamond", "Georgia", serif;
+
+$tablet-width: 1023px;
+$mobile-width: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+@mixin page-link() {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin list-style($padding:0, $margin:0, $list-style:none) {
+  padding: $padding;
+  margin: $margin;
+  list-style: $list-style;
+}
+
+@mixin pseudo($width, $height) {
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
+}

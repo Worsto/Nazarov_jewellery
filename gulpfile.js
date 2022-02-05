@@ -1,7 +1,7 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
+const sass = require('gulp-dart-sass');
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
@@ -19,7 +19,7 @@ const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -34,7 +34,7 @@ const stylesMin = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -66,14 +66,6 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  sync.init({
-    server: {
-      baseDir: "build"
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/sass/**/*.scss", gulp.series("stylesMin"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
@@ -173,6 +165,6 @@ exports.build = build;
 //Default
 
 exports.default = gulp.series(
-  build,
+  server,
   watcher
 );
